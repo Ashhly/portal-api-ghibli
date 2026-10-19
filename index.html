@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GhibliVerse | Portal de Animación</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-content">
+            <span class="badge">Consumo de API REST</span>
+            <h1>Catálogo Studio Ghibli</h1>
+            <p>Explorador interactivo de películas consumiendo servicios web públicos mediante Fetch API.</p>
+            
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar película por título...">
+                <button id="searchBtn">🔍 Buscar</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Estado de carga -->
+        <div id="loader" class="loader">
+            <div class="spinner"></div>
+            <p>Cargando datos desde la API...</p>
+        </div>
+
+        <!-- Mensaje de error / vacío -->
+        <div id="errorMessage" class="error-box hidden">
+            <p>No se encontraron resultados o hubo un problema al conectar con el servicio.</p>
+        </div>
+
+        <!-- Contenedor dinámico de películas -->
+        <section id="moviesGrid" class="movies-grid"></section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Tarea Diseño de Sistemas en Internet | UNI</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
